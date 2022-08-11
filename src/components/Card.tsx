@@ -38,14 +38,12 @@ const Card = ({
         border: '1px solid',
         borderRadius: '1rem'
       }}>
-      <b>{getName(connector)}</b>
-      <div style={{ marginBottom: '1rem' }}>
-        isActive ? {isActive ? '🟢' : '🔴'}
+      <div style={{ marginBottom: '0rem' }}> 
+      <b>{getName(connector)} {isActive ? '🟢' : '🔴'} ChainId: {chainId}</b>
       </div>
-      <div>ChainId: {chainId}</div>
       <div style={{ marginBottom: '1rem' }}>
         <p>
-          {accounts && accounts.length > 0
+          Address: {accounts && accounts.length > 0
             ? shortenAddress(accounts[0])
             : 'NONE'}
         </p>
